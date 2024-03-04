@@ -41,20 +41,20 @@ const AboutSection = () => {
                 <span className="font-bold">{"highly ambitious"}</span>,
                 <span className="font-bold">{" self-motivated"}</span>, and
                 <span className="font-bold">{" driven"}</span> software engineer
-                student
+                student.
               </p>
               <br />
               <p>
                 I graduate from Hunter College in 2025 and am excited to dive
-                into the tech industry after I graduate. During my time between
-                classes I&apos;m either completing school work or working on my
-                own personal side projects.
+                into the tech industry. During my time between classes, I&apos;m
+                either completing school work or working on my own personal side
+                projects.
               </p>
               <br />
               <p>
-                When I&apos;m not coding you can find me running through the
-                streets of NYC. I love to explore new areas to run, one of my
-                favorite&apos;s being ridgewood resevoir.
+                When I&apos;m not coding, you can find me running through the
+                streets of NYC. I love to explore new areas. One of my
+                favorite&apos;s being Ridgewood Resevoir.
               </p>
               <br />
               <p>
@@ -62,7 +62,7 @@ const AboutSection = () => {
                 <span className="font-bold text-blue-500">
                   never stop growing
                 </span>{" "}
-                and that&apos;s what I strive to do, I have a passion for
+                and that&apos;s what I strive to do. I have a passion for
                 technology. Technology has improved the quality of life for many
                 people and I want to be a part of that.
               </p>

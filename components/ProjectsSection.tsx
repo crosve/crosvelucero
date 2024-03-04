@@ -23,7 +23,7 @@ const projects = [
     link: "https://thrivr.vercel.app/",
   },
   {
-    name: "Coivd-19 Tracker",
+    name: "Covid-19 Tracker",
     description:
       "An application to visually see the number of cases of Coivd-19 around the world.",
     image: "/covid.png",
