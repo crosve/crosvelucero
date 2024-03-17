@@ -7,6 +7,15 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
+    name: "Pace Pulse",
+    description:
+      "A web application that provides runners of all leves to create custom training, injury prevention plan, and track race day shoes. The application is currently in development.",
+    image: "/pacepulse.png",
+    github: "https://github.com/crosve/runnersspace",
+    link: "https://runnersspace-git-main-crosves-projects.vercel.app/",
+  },
+
+  {
     name: "Samuel",
     description:
       "A website I designed and created for a client to showcase his work to potential employers. Includes a picture gallery to showcase his work.",
