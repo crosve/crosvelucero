@@ -16,6 +16,8 @@ const skills = [
   { skill: "Firebase" },
   { skill: "Node.js" },
   { skill: "C++" },
+  { skill: "SQL" },
+  { skill: "Flask" },
 ];
 
 const AboutSection = () => {
@@ -25,7 +27,7 @@ const AboutSection = () => {
         <Reveal>
           <h1 className="text-center font-bold text-4xl">
             About Me
-            <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+            <hr className="w-6 h-1 mx-auto my-4 bg-blue-500 border-0 rounded"></hr>
           </h1>
         </Reveal>
 
