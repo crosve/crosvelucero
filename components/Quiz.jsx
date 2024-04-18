@@ -6,18 +6,19 @@ function Quiz() {
   const [answers, setAnswers] = useState(null);
 
   useEffect(() => {
-    const shuffledAnswers = [
-      quiz[0].correct_answer,
-      ...quiz[0].incorrect_answers,
-    ].sort(() => Math.random() - 0.5);
-    setAnswers(shuffledAnswers);
+    if (quiz) {
+      const shuffledAnswers = [
+        quiz[0].correct_answer,
+        ...quiz[0].incorrect_answers,
+      ].sort(() => Math.random() - 0.5);
+      setAnswers(shuffledAnswers);
+    }
   }, [quiz]);
 
   const generateQuiz = () => {
     fetch("https://opentdb.com/api.php?amount=1")
       .then((response) => response.json())
       .then((data) => setQuiz(data.results));
-    console.log(data.results);
   };
 
   return (
