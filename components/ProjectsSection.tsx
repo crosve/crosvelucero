@@ -7,6 +7,15 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
+    name: "LA'CUNY Compass",
+    description: "All in one resource guide, inccluding a personal AI chat bot for personal discussion and map that pinpoints CUNY resource based off their local college",
+    image : "/ctp-hackathon.png",
+    github: "https://github.com/crosve/CTP-Hack",
+    link : "https://ctp-hack.vercel.app/",
+    
+  },
+
+  {
     name: "Pace Pulse",
     description:
       "A web application that provides runners of all leves to create custom training, injury prevention plan, and track race day shoes. The application is currently in development.",
@@ -24,12 +33,12 @@ const projects = [
     link: "https://samuellucero.vercel.app/",
   },
   {
-    name: "Thrivr",
+    name: "Senudi",
     description:
-      "Mental Health Platform aimed to give people a sense of security and safety. Currently working on the application.",
-    image: "/thrivr.png",
+      "Mental Health Platform aimed to give people a sense of security and safety.",
+    image: "/senudi.png",
     github: "#",
-    link: "https://thrivr.vercel.app/",
+    link: "https://www.senudi.org/",
   },
   {
     name: "Covid-19 Tracker",
@@ -39,6 +48,7 @@ const projects = [
     github: "https://github.com/crosve/COVID-19-Tracker",
     link: "https://covid19tracker-28bb1.web.app/",
   },
+
 ];
 
 const ProjectsSection = () => {
