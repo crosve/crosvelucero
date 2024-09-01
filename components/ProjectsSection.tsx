@@ -14,6 +14,14 @@ const projects = [
     link : "https://ctp-hack.vercel.app/",
     
   },
+  {
+    name: "Pomodoro Flashcards",
+    description: "Dulingo insipried app but with the pomodoro study method",
+    image : "/pomodor.png",
+    github: "https://github.com/crosve/Pomodoro",
+    link : "https://pomodoro-xvbo.vercel.app/",
+    
+  },
 
   {
     name: "Pace Pulse",
