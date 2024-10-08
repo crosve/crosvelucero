@@ -7,20 +7,35 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
+    name: "Mocha Mentors",
+    description:
+      "A web application that connects students with mentors in the tech industry. The application is currently in development.",
+    image: "/mocha.png",
+    github: "",
+    link: "",
+  },
+  {
+    name: "Wander",
+    description:
+      "Cornell red hackathon project that allows users to upload their travel experiences and share with other users. Won best use of MongoDB.",
+    image: "/wander.jpg",
+    github: "",
+    link: "",
+  },
+  {
     name: "LA'CUNY Compass",
-    description: "All in one resource guide, inccluding a personal AI chat bot for personal discussion and map that pinpoints CUNY resource based off their local college",
-    image : "/ctp-hackathon.png",
+    description:
+      "All in one resource guide, inccluding a personal AI chat bot for personal discussion and map that pinpoints CUNY resource based off their local college",
+    image: "/ctp-hackathon.png",
     github: "https://github.com/crosve/CTP-Hack",
-    link : "https://ctp-hack.vercel.app/",
-    
+    link: "https://ctp-hack.vercel.app/",
   },
   {
     name: "Pomodoro Flashcards",
     description: "Dulingo insipried app but with the pomodoro study method",
-    image : "/pomodor.png",
+    image: "/pomodor.png",
     github: "https://github.com/crosve/Pomodoro",
-    link : "https://pomodoro-xvbo.vercel.app/",
-    
+    link: "https://pomodoro-xvbo.vercel.app/",
   },
 
   {
@@ -56,7 +71,6 @@ const projects = [
     github: "https://github.com/crosve/COVID-19-Tracker",
     link: "https://covid19tracker-28bb1.web.app/",
   },
-
 ];
 
 const ProjectsSection = () => {
