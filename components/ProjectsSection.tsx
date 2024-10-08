@@ -23,13 +23,21 @@ const projects = [
     link: "",
   },
   {
-    name: "LA' CUNY Compass",
+    name: "LA'CUNY Compass",
     description:
-      "Brings together all CUNY resources, allowing easier access to students to find the resources they need. Won best use of datascience at CTP hackathon.",
-    image: "/LaCUNY.png",
+      "All in one resource guide, inccluding a personal AI chat bot for personal discussion and map that pinpoints CUNY resource based off their local college",
+    image: "/ctp-hackathon.png",
     github: "https://github.com/crosve/CTP-Hack",
     link: "https://ctp-hack.vercel.app/",
   },
+  {
+    name: "Pomodoro Flashcards",
+    description: "Dulingo insipried app but with the pomodoro study method",
+    image: "/pomodor.png",
+    github: "https://github.com/crosve/Pomodoro",
+    link: "https://pomodoro-xvbo.vercel.app/",
+  },
+
   {
     name: "Pace Pulse",
     description:
@@ -48,12 +56,12 @@ const projects = [
     link: "https://samuellucero.vercel.app/",
   },
   {
-    name: "Thrivr",
+    name: "Senudi",
     description:
-      "Mental Health Platform aimed to give people a sense of security and safety. Currently working on the application.",
-    image: "/thrivr.png",
+      "Mental Health Platform aimed to give people a sense of security and safety.",
+    image: "/senudi.png",
     github: "#",
-    link: "https://thrivr.vercel.app/",
+    link: "https://www.senudi.org/",
   },
   {
     name: "Covid-19 Tracker",

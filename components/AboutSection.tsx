@@ -18,6 +18,8 @@ const skills = [
   { skill: "C++" },
   { skill: "SQL" },
   { skill: "Flask" },
+  {skill: "FastAPi"},
+  {skill: "Express.js"}
 ];
 
 const AboutSection = () => {
