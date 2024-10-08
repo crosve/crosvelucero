@@ -7,6 +7,30 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 
 const projects = [
   {
+    name: "Mocha Mentors",
+    description:
+      "A web application that connects students with mentors in the tech industry. The application is currently in development.",
+    image: "/mocha.png",
+    github: "",
+    link: "",
+  },
+  {
+    name: "Wander",
+    description:
+      "Cornell red hackathon project that allows users to upload their travel experiences and share with other users. Won best use of MongoDB.",
+    image: "/wander.jpg",
+    github: "",
+    link: "",
+  },
+  {
+    name: "LA' CUNY Compass",
+    description:
+      "Brings together all CUNY resources, allowing easier access to students to find the resources they need. Won best use of datascience at CTP hackathon.",
+    image: "/LaCUNY.png",
+    github: "https://github.com/crosve/CTP-Hack",
+    link: "https://ctp-hack.vercel.app/",
+  },
+  {
     name: "Pace Pulse",
     description:
       "A web application that provides runners of all leves to create custom training, injury prevention plan, and track race day shoes. The application is currently in development.",
