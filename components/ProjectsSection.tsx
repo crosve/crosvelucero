@@ -11,7 +11,7 @@ const projects = [
     description:
       "A web application that connects students with mentors in the tech industry. The application is currently in development.",
     image: "/mocha.png",
-    github: "",
+    github: "https://github.com/wangtony4005/coffeechat",
     link: "",
   },
   {
@@ -29,13 +29,6 @@ const projects = [
     image: "/ctp-hackathon.png",
     github: "https://github.com/crosve/CTP-Hack",
     link: "https://ctp-hack.vercel.app/",
-  },
-  {
-    name: "Pomodoro Flashcards",
-    description: "Dulingo insipried app but with the pomodoro study method",
-    image: "/pomodor.png",
-    github: "https://github.com/crosve/Pomodoro",
-    link: "https://pomodoro-xvbo.vercel.app/",
   },
 
   {
@@ -88,7 +81,17 @@ const ProjectsSection = () => {
               <Appear>
                 <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                   <div className=" md:w-1/2">
-                    <Link href={project.link}>
+                    {project.link !== "" ? (
+                      <Link href={project.link !== "" ? project.link : "/"}>
+                        <Image
+                          src={project.image}
+                          alt=""
+                          width={1000}
+                          height={1000}
+                          className="rounded-xl shadow-xl hover:opacity-70"
+                        />
+                      </Link>
+                    ) : (
                       <Image
                         src={project.image}
                         alt=""
@@ -96,7 +99,7 @@ const ProjectsSection = () => {
                         height={1000}
                         className="rounded-xl shadow-xl hover:opacity-70"
                       />
-                    </Link>
+                    )}
                   </div>
                   <div className="mt-8 md:w-1/2">
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
