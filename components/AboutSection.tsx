@@ -8,6 +8,7 @@ const skills = [
   { skill: "JavaScript" },
   { skill: "TypeScript" },
   { skill: "Python" },
+  { skill: "Golang" },
   { skill: "React" },
   { skill: "Next.js" },
   { skill: "Tailwind CSS" },
@@ -18,8 +19,9 @@ const skills = [
   { skill: "C++" },
   { skill: "SQL" },
   { skill: "Flask" },
-  {skill: "FastAPi"},
-  {skill: "Express.js"}
+  { skill: "FastAPi" },
+  { skill: "Express.js" },
+  { skill: "AWS" },
 ];
 
 const AboutSection = () => {
@@ -45,7 +47,6 @@ const AboutSection = () => {
                 <span className="font-bold">{"highly ambitious"}</span>,
                 <span className="font-bold">{" self-motivated"}</span>, and
                 <span className="font-bold">{" driven"}</span> software engineer
-                student.
               </p>
               <br />
               <p>
@@ -57,18 +58,18 @@ const AboutSection = () => {
               <br />
               <p>
                 When I&apos;m not coding, you can find me running through the
-                streets of NYC. I love to explore new areas. One of my
-                favorite&apos;s being Ridgewood Resevoir.
+                streets of NYC or exploring new coffee shops around new york
+                city! Future blog coming for that stay tune😉
               </p>
               <br />
               <p>
-                I believe that you should{" "}
+                I believe that being able to improve yourself
                 <span className="font-bold text-blue-500">
-                  never stop growing
+                  {" "}
+                  is a privalege and I'm never want to take advantage of that.
                 </span>{" "}
-                and that&apos;s what I strive to do. I have a passion for
-                technology. Technology has improved the quality of life for many
-                people and I want to be a part of that.
+                I've always been driven by my passion for technology and always
+                will be.
               </p>
             </Reveal>
           </div>

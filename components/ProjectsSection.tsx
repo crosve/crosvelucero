@@ -9,7 +9,7 @@ const projects = [
   {
     name: "Mocha Mentors",
     description:
-      "A web application that connects students with mentors in the tech industry. The application is currently in development.",
+      "A web application that connects students with mentors in the tech industry. The application was for my capstone project",
     image: "/mocha.png",
     github: "https://github.com/wangtony4005/coffeechat",
     link: "",
@@ -19,7 +19,7 @@ const projects = [
     description:
       "Cornell red hackathon project that allows users to upload their travel experiences and share with other users. Won best use of MongoDB.",
     image: "/wander.jpg",
-    github: "",
+    github: "https://github.com/crosve/wander",
     link: "",
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     description:
       "Mental Health Platform aimed to give people a sense of security and safety.",
     image: "/senudi.png",
-    github: "#",
+    github: "",
     link: "https://www.senudi.org/",
   },
   {
@@ -107,18 +107,23 @@ const ProjectsSection = () => {
                       {project.description}
                     </p>
                     <div className="flex flex-row align-bottom space-x-4">
-                      <Link href={project.github} target="_blank">
-                        <BsGithub
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
-                      <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
+                      {project.github !== "" && (
+                        <Link href={project.github} target="_blank">
+                          <BsGithub
+                            size={30}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
+
+                      {project.link !== "" && (
+                        <Link href={project.link} target="_blank">
+                          <BsArrowUpRightSquare
+                            size={30}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

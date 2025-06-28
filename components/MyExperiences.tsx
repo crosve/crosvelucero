@@ -13,12 +13,39 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
+    id: 2,
+    role: "Software Engineer",
+    company: "TipTop Technologies",
+    duration: "May 2025 - Current",
+    description:
+      "Working with NLP to anaylyze social media user consumtion data for our stake holders.",
+    skills: [
+      "React",
+      "TypeScript",
+      "Flask",
+      "Tailwind CSS",
+      "MySQL",
+      "Docker",
+      "FastAPI",
+      "Gemini",
+    ],
+  },
+  {
+    id: 3,
+    role: "Technical Lead",
+    company: "Csphere - Rediscover your content",
+    duration: "March 2025 - Current",
+    description:
+      "Taking lead on a passion project with a couple of guys. Setting up security and scalability of the platform. ",
+    skills: ["Nextjs", "Tailwind", "JavaScript", "ShadCn"],
+  },
+  {
     id: 1,
     role: "Software Engineer Intern",
     company: "Tip Top Technologies",
-    duration: "April 2024 - Present",
+    duration: "April 2024 - May 2025",
     description:
-      "Working as a full stack developer on our newest platform, improving our feed matching algorithm and redner times for our users.",
+      "Worked on Social glass platform for ambascoo - an inside look into social media consumtion. ",
     skills: [
       "React",
       "TypeScript",
@@ -29,24 +56,6 @@ const experiences: Experience[] = [
       "FastAPI",
     ],
   },
-  //   {
-  //     id: 2,
-  //     role: "Frontend Developer",
-  //     company: "Digital Innovations",
-  //     duration: "Mar 2019 - Dec 2021",
-  //     description:
-  //       "Developed responsive web applications and contributed to the company's component library.",
-  //     skills: ["React", "JavaScript", "CSS3", "Webpack"],
-  //   },
-  //   {
-  //     id: 3,
-  //     role: "Web Developer Intern",
-  //     company: "StartUp Vision",
-  //     duration: "Jun 2018 - Feb 2019",
-  //     description:
-  //       "Assisted in building landing pages and implementing UI designs.",
-  //     skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
-  //   },
 ];
 
 function MyExperiences() {

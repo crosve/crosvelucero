@@ -111,7 +111,7 @@ function Quiz() {
 
   return (
     <section className="flex items-center justify-center flex-col">
-      {quiz === null && (
+      {/* {quiz === null && (
         <>
           <h1 className="my-10 text-center font-bold text-4xl">
             Click on the button to generate a quiz!
@@ -168,7 +168,7 @@ function Quiz() {
             </button>
           </form>
         </>
-      )}
+      )} */}
 
       {error && (
         <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md mt-10">
