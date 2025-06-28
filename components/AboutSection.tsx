@@ -66,10 +66,11 @@ const AboutSection = () => {
                 I believe that being able to improve yourself
                 <span className="font-bold text-blue-500">
                   {" "}
-                  is a privalege and I'm never want to take advantage of that.
+                  is a privalege and I&apos;m never want to take advantage of
+                  that.
                 </span>{" "}
-                I've always been driven by my passion for technology and always
-                will be.
+                I&apos;ve always been driven by my passion for technology and
+                always will be.
               </p>
             </Reveal>
           </div>
