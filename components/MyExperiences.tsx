@@ -75,7 +75,10 @@ function MyExperiences() {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4 flex items-center justify-center flex-col space-y-32">
+    <div
+      id="experience"
+      className="max-w-4xl mx-auto py-12 px-4 flex items-center justify-center flex-col space-y-32"
+    >
       <h1>
         <span
           className="text-5xl font-bold text-gray-800 mb-8"
