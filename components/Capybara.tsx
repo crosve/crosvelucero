@@ -38,39 +38,41 @@ function Capybara(): JSX.Element {
 
       setMessages((prev) => [...prev, userMessage]);
       setInputValue("");
+      const base_url = process.env.NEXT_PUBLIC_BASE_URL!;
+      console.log("base url: ", base_url);
+      const ENDPOINT = `${base_url}/crosve`;
+      console.log("endpoint, ", ENDPOINT);
 
-      const ENDPOINT = "http://127.0.0.1:8000/crosve/chat";
+      try {
+        const response = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ query: inputValue }),
+        });
 
-      //   try {
-      //     const response = await fetch(ENDPOINT, {
-      //       method: "POST",
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       },
-      //       body: JSON.stringify({ query: inputValue }),
-      //     });
-
-      //     const data = await response.json();
-      //     console.log(data);
-      //     const llmResponse: Message = {
-      //       id: Date.now() + 1,
-      //       text: data.text,
-      //       isBot: true,
-      //     };
-      //     setMessages((prev) => [...prev, llmResponse]);
-      //   } catch (error) {
-      //     console.log(error);
-      //   }
-
-      //   Simulate bot response
-      setTimeout(() => {
-        const botResponse: Message = {
+        const data = await response.json();
+        console.log(data);
+        const llmResponse: Message = {
           id: Date.now() + 1,
-          text: "Thanks for your question about Crosve! I'd be happy to help you with more information.",
+          text: data.text,
           isBot: true,
         };
-        setMessages((prev) => [...prev, botResponse]);
-      }, 1000);
+        setMessages((prev) => [...prev, llmResponse]);
+      } catch (error) {
+        console.log(error);
+      }
+
+      //   Simulate bot response
+      // setTimeout(() => {
+      //   const botResponse: Message = {
+      //     id: Date.now() + 1,
+      //     text: "Thanks for your question about Crosve! I'd be happy to help you with more information.",
+      //     isBot: true,
+      //   };
+      //   setMessages((prev) => [...prev, botResponse]);
+      // }, 1000);
     }
   };
 
@@ -82,7 +84,7 @@ function Capybara(): JSX.Element {
   };
 
   return (
-    <div className="fixed right-6 bottom-6 z-50">
+    <div className="fixed right-3 md:right-6 bottom-6 z-50">
       {/* Chat Popup */}
       {isOpen && (
         <div className="absolute bottom-24 right-0 w-80 h-96 bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-in slide-in-from-bottom-4 duration-300">
@@ -169,7 +171,7 @@ function Capybara(): JSX.Element {
       <div className="flex items-start gap-2 flex-col animate-bounceOnce">
         {!isOpen && (
           <div
-            className="relative bg-white text-black px-4 py-2 rounded-xl shadow-md text-sm border border-gray-300
+            className="relative bg-white text-black px-4 py-2 md:w-full w-24 text-wrap rounded-xl shadow-md text-sm border border-gray-300
                         before:absolute before:content-[''] before:-bottom-2 before:left-4 before:w-3 before:h-3 
                         before:bg-white before:rounded-full animate-pulse"
           >
@@ -183,6 +185,7 @@ function Capybara(): JSX.Element {
             className="cursor-pointer hover:scale-110 transition-transform duration-200 left-10"
             src="/capybara.png"
             alt="capybara"
+            layout="responsive"
             quality={100}
             width={100}
             height={100}
