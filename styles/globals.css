@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #EDE0C4;
+  color: #2C1A0E;
+  font-family: 'Lora', Georgia, serif;
+  background-image:
+    /* Paper grain noise */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.04' fill='%232C1A0E'/%3E%3C/svg%3E"),
+    /* Geometric diamond grid */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%232C1A0E' stroke-width='0.5' stroke-opacity='0.10'/%3E%3C/svg%3E"),
+    /* Coffee/tea stain spots */
+    radial-gradient(ellipse at 14% 18%, rgba(120, 78, 28, 0.16) 0%, transparent 42%),
+    radial-gradient(ellipse at 83% 72%, rgba(100, 62, 18, 0.12) 0%, transparent 38%),
+    radial-gradient(ellipse at 55% 94%, rgba(80, 52, 18, 0.09) 0%, transparent 30%),
+    radial-gradient(ellipse at 70% 10%, rgba(140, 98, 38, 0.10) 0%, transparent 28%),
+    radial-gradient(ellipse at 28% 68%, rgba(110, 72, 28, 0.08) 0%, transparent 34%);
+  background-attachment: fixed;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* Staggered fade-up for hero elements */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up-1 { animation: fadeUp 0.7s ease-out 0.1s both; }
+.fade-up-2 { animation: fadeUp 0.7s ease-out 0.3s both; }
+.fade-up-3 { animation: fadeUp 0.7s ease-out 0.5s both; }
+.fade-up-4 { animation: fadeUp 0.7s ease-out 0.7s both; }
+.fade-up-5 { animation: fadeUp 0.7s ease-out 0.9s both; }

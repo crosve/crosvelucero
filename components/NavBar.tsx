@@ -1,10 +1,6 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll/modules";
-import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
-import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 import { Reveal } from "./PageTransition";
 
@@ -14,56 +10,46 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "Home",
-    page: "home",
-  },
-
-  {
-    label: "About",
-    page: "about",
-  },
-  {
-    label: "Experience",
-    page: "experience",
-  },
-  {
-    label: "Projects",
-    page: "projects",
-  },
+  { label: "Home", page: "home" },
+  { label: "About", page: "about" },
+  { label: "Experience", page: "experience" },
+  { label: "Projects", page: "projects" },
 ];
 
-const relodPage = () => {
+const reloadPage = () => {
   window.location.reload();
 };
 
 export default function Navbar() {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
-  const pathname = usePathname();
   const [navbar, setNavbar] = useState(false);
   return (
-    <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
+    <header
+      className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50"
+      style={{
+        backgroundColor: "rgba(237, 224, 196, 0.92)",
+        backdropFilter: "blur(6px)",
+        borderBottom: "1px solid rgba(44, 26, 14, 0.10)",
+        boxShadow: "0 1px 8px rgba(44, 26, 14, 0.06)",
+      }}
+    >
       <Reveal>
         <div className="justify-between md:items-center md:flex">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              <Link to="home">
-                <div className="container flex items-center space-x-2">
-                  <h1
-                    onClick={relodPage}
-                    className="text-2xl font-bold cursor-pointer"
-                  >
-                    Crosve Lucero
-                  </h1>
-                </div>
+            <div className="flex items-center justify-between py-3 md:py-4 md:block">
+              <Link to="home" className="cursor-pointer">
+                <h1
+                  onClick={reloadPage}
+                  className="font-display text-xl font-bold text-sepia cursor-pointer tracking-wide"
+                >
+                  Crosve Lucero
+                </h1>
               </Link>
               <div className="md:hidden">
                 <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  className="p-2 text-sepia rounded-md"
                   onClick={() => setNavbar(!navbar)}
                 >
-                  {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
+                  {navbar ? <IoMdClose size={26} /> : <IoMdMenu size={26} />}
                 </button>
               </div>
             </div>
@@ -75,41 +61,22 @@ export default function Navbar() {
                 navbar ? "block" : "hidden"
               }`}
             >
-              <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                {NAV_ITEMS.map((item, idx) => {
-                  return (
-                    <Link
-                      key={idx}
-                      to={item.page}
-                      className={
-                        "block lg:inline-block text-neutral-600 cursor-pointer text-center  hover:text-slate-950 dark:text-neutral-100"
-                      }
-                      activeClass="active"
-                      spy={true}
-                      smooth={true}
-                      offset={-100}
-                      duration={500}
-                      onClick={() => setNavbar(!navbar)}
-                    >
-                      {item.label}
-                    </Link>
-                  );
-                })}
-                {/* {currentTheme === "dark" ? (
-                <button
-                  onClick={() => setTheme("light")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiSunLine size={25} color="black" />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setTheme("dark")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiMoonFill size={25} />
-                </button>
-              )} */}
+              <div className="items-center justify-center space-y-6 md:flex md:space-x-8 md:space-y-0">
+                {NAV_ITEMS.map((item, idx) => (
+                  <Link
+                    key={idx}
+                    to={item.page}
+                    className="block lg:inline-block font-display text-sm tracking-widest uppercase text-sepia/50 cursor-pointer text-center hover:text-sepia transition-colors"
+                    activeClass="!text-sepia"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    onClick={() => setNavbar(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

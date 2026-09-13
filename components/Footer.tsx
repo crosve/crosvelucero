@@ -3,28 +3,36 @@ import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
-      <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0"></hr>
-      <div className="mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
-        <div className="flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100">
-          © 2025 Crosve Lucero<a href="/" className="hover:underline"></a>
-        </div>
-        <div className="flex flex-row items-center justify-center space-x-2 mb-1">
+    <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl mt-8 mb-10">
+      <div className="flex items-center gap-4 mb-6">
+        <div className="flex-1 h-px" style={{ backgroundColor: "rgba(44, 26, 14, 0.12)" }} />
+        <span className="font-display text-xs tracking-[0.4em] text-coffee/40 uppercase">
+          · · ·
+        </span>
+        <div className="flex-1 h-px" style={{ backgroundColor: "rgba(44, 26, 14, 0.12)" }} />
+      </div>
+
+      <div className="flex flex-col text-center md:flex-row md:justify-between md:items-center gap-3">
+        <p className="font-display italic text-sm text-sepia/35">
+          © 2025 Crosve Lucero
+        </p>
+        <div className="flex flex-row items-center justify-center gap-3">
           <a href="https://github.com/crosve" rel="noreferrer" target="_blank">
             <AiOutlineGithub
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
+              className="transition-transform hover:-translate-y-0.5 cursor-pointer"
+              style={{ color: "rgba(44, 26, 14, 0.45)" }}
+              size={24}
             />
           </a>
-
           <a
             href="https://www.linkedin.com/in/crosve-lucero-04a057274/"
             rel="noreferrer"
             target="_blank"
           >
             <AiOutlineLinkedin
-              className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
-              size={30}
+              className="transition-transform hover:-translate-y-0.5 cursor-pointer"
+              style={{ color: "rgba(44, 26, 14, 0.45)" }}
+              size={24}
             />
           </a>
         </div>

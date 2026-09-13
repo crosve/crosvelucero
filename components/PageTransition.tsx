@@ -9,32 +9,24 @@ interface RevealProps {
 export const Reveal = ({ children }: RevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
-
   const controls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      console.log("isInView", isInView);
       controls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, controls]);
 
   return (
-    <div
-      ref={ref}
-      style={{
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
+    <div ref={ref} style={{ perspective: "700px", position: "relative" }}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: -35 },
-          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: -20, rotateX: 4 },
+          visible: { opacity: 1, y: 0, rotateX: 0 },
         }}
         initial="hidden"
         animate={controls}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.65, ease: [0.215, 0.61, 0.355, 1] }}
         className="w-full h-full"
       >
         {children}

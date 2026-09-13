@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef, ReactNode } from "react";
-
 import { motion, useAnimation } from "framer-motion";
 
 interface Props {
@@ -8,7 +7,7 @@ interface Props {
   children?: ReactNode;
 }
 
-export default function SlideUp({ children, offset = "0px" }: Props) {
+export default function Appear({ children, offset = "0px" }: Props) {
   const controls = useAnimation();
   const ref = useRef(null);
 
@@ -20,7 +19,8 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
             controls.start({
               y: 0,
               opacity: 1,
-              transition: { duration: 0.5, ease: "easeOut" },
+              rotateX: 0,
+              transition: { duration: 0.75, ease: [0.215, 0.61, 0.355, 1] },
             });
           }
         });
@@ -28,20 +28,21 @@ export default function SlideUp({ children, offset = "0px" }: Props) {
       { rootMargin: offset }
     );
 
-    //test 2
     if (ref.current) {
       observer.observe(ref.current);
     }
-  }, [ref]);
+  }, [ref, controls, offset]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ y: 35, opacity: 0 }}
-      animate={controls}
-      className="relative"
-    >
-      {children}
-    </motion.div>
+    <div style={{ perspective: "700px" }}>
+      <motion.div
+        ref={ref}
+        initial={{ y: 28, opacity: 0, rotateX: -5 }}
+        animate={controls}
+        className="relative"
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }
